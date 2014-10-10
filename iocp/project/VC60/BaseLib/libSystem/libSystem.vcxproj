@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName />
+    <SccLocalPath />
+    <ProjectGuid>{8A11A2D7-51AA-A93A-25B5-4C853E0AF5AD}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>../../../../src/inc/crossH;../../../../src/inc/crossh/windows;../../../../src/inc/logH;../../../../src/inc/systemh;../../../../src/system/base;../../../../src/system/windows;../../../../src/inc/logDB;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Debug\libSystem.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug\libSystem.bsc</OutputFile>
+    </Bscmake>
+    <Lib>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>..\..\..\..\library\winxp\libSystem.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Release\libSystem.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+      <AdditionalIncludeDirectories>../../../../src/inc/crossH;../../../../src/inc/crossh/windows;../../../../src/inc/logH;../../../../src/inc/systemh;../../../../src/system/base;../../../../src/system/windows;../../../../src/inc/logDB;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release\libSystem.bsc</OutputFile>
+    </Bscmake>
+    <Lib>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>..\..\..\..\library\winxp\Release\libSystem.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\src\System\Base\BaseCodeListZK.cpp" />
+    <ClCompile Include="..\..\..\..\src\System\Base\BaseFileZK.cpp" />
+    <ClCompile Include="..\..\..\..\src\System\Base\BaseFunctionsZK.cpp" />
+    <ClCompile Include="..\..\..\..\src\System\Base\BaseLogDB.cpp" />
+    <ClCompile Include="..\..\..\..\src\System\Base\BaseLogZK.cpp" />
+    <ClCompile Include="..\..\..\..\src\System\Base\BasePageList.cpp" />
+    <ClCompile Include="..\..\..\..\src\System\Base\BaseThreadZK.cpp" />
+    <ClCompile Include="..\..\..\..\src\System\Base\BaseTTSZK.cpp" />
+    <ClCompile Include="..\..\..\..\src\System\Base\comm_function.cpp" />
+    <ClCompile Include="..\..\..\..\src\System\Windows\CrossDebugOutZK.cpp" />
+    <ClCompile Include="..\..\..\..\src\System\Windows\CrossFileZK.cpp" />
+    <ClCompile Include="..\..\..\..\src\System\Base\FileIni.cpp" />
+    <ClCompile Include="..\..\..\..\src\System\Base\Point2Segment.cpp" />
+    <ClCompile Include="..\..\..\..\src\System\Windows\crossFunctionsZK.cpp" />
+    <ClCompile Include="..\..\..\..\src\System\Windows\CrossGpsZK.cpp" />
+    <ClCompile Include="..\..\..\..\src\System\Windows\CrossIOCompletionZK.cpp" />
+    <ClCompile Include="..\..\..\..\src\System\Windows\CrossLoadDllZK.cpp" />
+    <ClCompile Include="..\..\..\..\src\System\Windows\CrossSharedMemoryZK.cpp" />
+    <ClCompile Include="..\..\..\..\src\System\Windows\CrossSocketZK.cpp" />
+    <ClCompile Include="..\..\..\..\src\System\Windows\CrossTaskZK.cpp" />
+    <ClCompile Include="..\..\..\..\src\System\Windows\CrossThreadZK.cpp" />
+    <ClCompile Include="..\..\..\..\src\System\Base\Point2Route.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\src\Inc\systemH\BaseCodeListZK.h" />
+    <ClInclude Include="..\..\..\..\src\Inc\systemH\CCriticalLock.h" />
+    <ClInclude Include="..\..\..\..\src\Inc\systemH\BaseFileZK.h" />
+    <ClInclude Include="..\..\..\..\src\Inc\systemH\BaseFunctionsZK.h" />
+    <ClInclude Include="..\..\..\..\src\Inc\systemH\BaseLogDB.h" />
+    <ClInclude Include="..\..\..\..\src\Inc\systemH\BaseLogZK.h" />
+    <ClInclude Include="..\..\..\..\src\Inc\systemH\BasePageList.h" />
+    <ClInclude Include="..\..\..\..\src\Inc\systemH\BaseThreadZK.h" />
+    <ClInclude Include="..\..\..\..\src\Inc\systemH\BaseTTSZK.h" />
+    <ClInclude Include="..\..\..\..\src\Inc\systemH\CrossDebugOutZK.h" />
+    <ClInclude Include="..\..\..\..\src\Inc\systemH\CrossFileZK.h" />
+    <ClInclude Include="..\..\..\..\src\Inc\systemH\crossFunctionsZK.h" />
+    <ClInclude Include="..\..\..\..\src\Inc\systemH\CrossGpsZK.h" />
+    <ClInclude Include="..\..\..\..\src\Inc\systemH\CrossIOCompletionZK.h" />
+    <ClInclude Include="..\..\..\..\src\Inc\systemH\CrossLoadDllZK.h" />
+    <ClInclude Include="..\..\..\..\src\Inc\systemH\CrossSharedMemoryZK.h" />
+    <ClInclude Include="..\..\..\..\src\Inc\systemH\CrossSocketZK.h" />
+    <ClInclude Include="..\..\..\..\src\Inc\systemH\CrossTaskZK.h" />
+    <ClInclude Include="..\..\..\..\src\Inc\systemH\CrossThreadZK.h" />
+    <ClInclude Include="..\..\..\..\src\Inc\systemH\FileIni.h" />
+    <ClInclude Include="..\..\..\..\src\Inc\systemH\Point2Segment.h" />
+    <ClInclude Include="..\..\..\..\src\Inc\systemH\Point2Route.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
